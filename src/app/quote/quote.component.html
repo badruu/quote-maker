@@ -1,7 +1,15 @@
 <div class="container-fluid">
-  <i class="fa fa-thumbs-up" (click) = quoteLike(quote) style="padding: 2%"><p>likes: {{quote.likes}}</p><br></i>
-  <i class="fa fa-thumbs-down" (click)=quoteDislike(quote) style="padding: 2%"><p>Dislikes: {{quote.dislikes}}</p><br></i>
-  <i class="fa fa-trash" (click) = 'quoteDelete(true)' style="padding: 2%"><p style="font-weight:800">DELETE</p><br></i>
+  <div class="row">
+    <div class="col-md-4">
+        <i class="fa fa-thumbs-up" (click) = quoteLike(quote) style="padding: 2%"><p>{{quote.likes}}</p><br></i>
+    </div>
+    <div class="col-md-4">
+        <i class="fa fa-thumbs-down" (click)=quoteDislike(quote) style="padding: 2%"><p>{{quote.dislikes}}</p><br></i>
+    </div>
+    <div class="col-md-4">
+        <i class="fa fa-trash" (click) = 'quoteDelete(true)' style="padding: 2%"> <br> Delete</i>
+    </div>
+  </div>
 </div>
 
 
