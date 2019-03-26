@@ -4,7 +4,7 @@
               <!-- author name -->
         <div class="form-group">
         
-           <label for="author" >Author name</label>
+           <label for="author" >Author name</label><br>
            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Albert Einstein" required>
 
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger"> 
@@ -16,7 +16,7 @@
               <!-- quote form -->
         <div class="form-group">
         
-          <label for="content">Quote</label>
+          <label for="content">Quote</label><br>
           <textarea class="form-control" id="quote" rows="5" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
               
               <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
@@ -29,7 +29,7 @@
 
               <div class="form-group">
         
-                  <label for="writer" >Writer name</label>
+                  <label for="writer" >Writer name</label><br>
                   <input type="text" class="form-control" id="writer" [(ngModel)]="newQuote.writer" name="writer" #writer="ngModel" placeholder="B.Noor" required>
   
                   <div [hidden]="writer.valid || writer.pristine" class="alert alert-danger"> 
@@ -41,7 +41,7 @@
 
                 <div class="form-group">
 
-                  <label for="date">Submission</label>
+                  <label for="date">Submission Date</label><br>
                   <input type="text" class="form-control" id= "date" [(ngModel)]="newQuote.date" name="date" #date="ngModel" disabled>
                 
                   <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
@@ -52,9 +52,9 @@
                 <!--  buttons -->
         
         
-          <button class="btn btn-success" type="submit">submit Quote</button>
+          <button class="btn btn-success" type="submit">submit Quote</button><br>
       
-          <button type="reset" class="btn btn-danger">New Quote</button>
+          <button type="reset" class="btn btn-danger" style="margin: 2%">Reset</button><br>
         </form>
         </div>
       

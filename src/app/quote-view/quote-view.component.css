@@ -5,3 +5,24 @@ h1
     font-size: xx-large;
     font-weight: 900;
 }
+.quote-form
+{
+    background-image: radial-gradient(circle, #000000, #040102, #070206, #08040b, #08060f, #0e0f16, #11151c, #131b22, #1a262c, #213136, #2a3d3f, #344948);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card
+{
+    background-image: radial-gradient(circle, #000000, #040102, #070206, #08040b, #08060f, #0e0f16, #11151c, #131b22, #1a262c, #213136, #2a3d3f, #344948);
+     color: #fff;
+}
+p
+{
+    font-family: monospace;
+    font-size: large;
+}
+.wells
+{
+    margin: 2%;
+    
+}
