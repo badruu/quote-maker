@@ -1,59 +1,62 @@
 <div class="container-fluid">
-<!-- title -->
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-md-12">
-        <h1> <small>WELCOME TO</small><hr><br> QUOTE INITIATOR </h1> 
-        </div>
-    </div>
-  </div>
-
-    <!-- quote making form -->
-  <div class="row">
-    <div class="col-md-4">
-        <div class="quote-form">
-          <div class="wells">
-              <h3> WOULD YOU LIKE TO ADD A QUOTE?</h3>
-              <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
-          </div>
-            
-          </div>
-
-    </div>
-      
-    
-      <!-- first quote -->
-    <div class="col-md-8">
-      <div class="container">
-        <div class="row">
-            <div class="card col-md-3 mr-1" *ngFor='let quote of quotes; let i=index' style="width: 18rem;">
-                
-        
-        
-               <div class="card-body">
-                  <i class="fa fa-quote-left"></i><br><hr>
-                  <p id = "{{i}}">"{{quote.quote}}" </p><hr>
-                  <i class="fa fa-quote-right"></i><br>
-                <h5 class="card-title">
-                    <em>{{quote.author}}</em>
-                </h5>
-                <p>{{quote.date|dateSetter}}, {{quote.date|date}}</p><br>
-
-                
-
-                <i class="fa fa-user-circle"></i><p>{{quote.writer}}</p><br>
-
-                <app-quote [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote>
-                
-              </div>
-            </div>
-    
+    <!-- title -->
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-12">
+          <h1> <small>WELCOME TO</small>
+            <hr><br> QUOTE INITIATOR </h1>
         </div>
       </div>
     </div>
-        
-
+  
+    <!-- quote making form -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="quote-form">
+          <div class="wells">
+            <h3> WOULD YOU LIKE TO ADD A QUOTE?</h3>
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+  
+      <!-- first quote -->
+      <div class="col-md-8">
+        <div class="container">
+          <div class="row">
+            <div class="card col-md-3 mr-1" *ngFor='let quote of quotes; let i=index' style="width: 18rem;">
+  
+  
+  
+              <div class="card-body">
+                <i class="fa fa-quote-left"></i><br>
+                <hr>
+                <p id="{{i}}">"{{quote.quote}}" </p>
+                <hr>
+                <i class="fa fa-quote-right"></i><br>
+                <h5 class="card-title">
+                  <em>{{quote.author}}</em>
+                </h5>
+                <p>{{quote.date|dateSetter}}, {{quote.date|date}}</p><br>
+  
+  
+  
+                <i class="fa fa-user-circle"></i>
+                <p>{{quote.writer}}</p><br>
+  
+                <app-quote [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote>
+  
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+  
+    </div>
+  
   </div>
-    
-</div>
-
