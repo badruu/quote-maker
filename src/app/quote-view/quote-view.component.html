@@ -1,0 +1,38 @@
+<div class="container-fluid">
+<!-- title -->
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-12">
+        <h1> <small>WELCOME TO</small> QUOTE INITIATOR </h1> 
+        </div>
+    </div>
+  </div>
+
+    <!-- quote making form -->
+
+    <div class="quote-form">
+      <h3> WOULD YOU LIKE TO ADD A QUOTE?</h3>
+      <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+    </div>
+
+  <!-- first quote -->
+
+  <div>
+    <div *ngFor='let quote of quotes; let i=index' class="each-quote">
+      <h5>QUOTE:</h5>
+      <p id = "{{i}}">"{{quote.quote}}" </p>
+      <p>
+        UPLOAD DATE: {{quote.date|dateSetter}}, {{quote.date|date}}
+      </p>
+
+      <app-quote [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote>
+
+      <!-- <app-quote-view [Quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-view> -->
+    </div>
+
+  </div>
+
+
+ 
+</div>
+

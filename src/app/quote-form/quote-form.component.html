@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row">
+      <form (ngSubmit)= 'submitQuote()' #quoteForm="ngForm">
+              <!-- author name -->
+        <div class="form-group">
+        
+           <label for="author" >Author name</label>
+           <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" placeholder="Albert Einstein" required>
+
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger"> 
+               <p>Provide name of the author</p> 
+            </div>
+        </div>
+      
+      
+              <!-- quote form -->
+        <div class="form-group">
+        
+          <label for="content">Quote</label>
+          <textarea class="form-control" id="quote" rows="5" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
+              
+              <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                Quote cannot be empty
+              </div>
+
+              </div>
+
+              <!-- Submitter name -->
+
+              <div class="form-group">
+        
+                  <label for="writer" >Writer name</label>
+                  <input type="text" class="form-control" id="writer" [(ngModel)]="newQuote.writer" name="writer" #writer="ngModel" placeholder="B.Noor" required>
+  
+                  <div [hidden]="writer.valid || writer.pristine" class="alert alert-danger"> 
+                   <p>Provide name of the contributer</p> 
+                  </div>
+                </div>
+
+                <!-- Date of submission -->
+
+                <div class="form-group">
+
+                  <label for="date">Submission</label>
+                  <input type="text" class="form-control" id= "date" [(ngModel)]="newQuote.date" name="date" #date="ngModel" disabled>
+                
+                  <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+                    <p>Submission date is required</p>
+                  </div>
+                </div>
+
+                <!--  buttons -->
+        
+        
+          <button class="btn btn-success" type="submit">submit Quote</button>
+      
+          <button type="reset" class="btn btn-danger">New Quote</button>
+        </form>
+        </div>
+      
+        
+      
+    </div>
