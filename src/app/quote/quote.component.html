@@ -1,41 +1,7 @@
 <div class="container-fluid">
-  <h3>Quote</h3>
-  <div class="row">
-    <div class="about">
-      <h4>ABOUT</h4>
-      <p>
-        Author: {{quote.Author}}
-      </p>
-      <p>
-        Contributer: {{quote.writer}}
-      </p>
-    </div>
-    <div class="rating">
-      <p>
-        likes: {{quote.likes}}
-      </p>
-      <p>
-        Dislikes: {{quote.dislikes}}
-      </p>
-    </div>
-  </div>
-
-  
-  <i class="fa fa-thumbs-up" (click) = quoteLike(quote) style="padding: 2%"></i>
-
-  <i class="fa fa-thumbs-down" (click)=quoteDislike(quote) style="padding: 2%"></i>
-
-
-
-  <i class="fa fa-trash" (click) = 'quoteDelete(true)' style="padding: 2%"></i>
-  
-
-
-  <!-- <button type="button" class="btn btn-info" (click)=quoteDislike(quote)>Disike</button> -->
-
-  
-
-
+  <i class="fa fa-thumbs-up" (click) = quoteLike(quote) style="padding: 2%"><p>likes: {{quote.likes}}</p><br></i>
+  <i class="fa fa-thumbs-down" (click)=quoteDislike(quote) style="padding: 2%"><p>Dislikes: {{quote.dislikes}}</p><br></i>
+  <i class="fa fa-trash" (click) = 'quoteDelete(true)' style="padding: 2%"><p style="font-weight:800">DELETE</p><br></i>
 </div>
 
 

@@ -3,7 +3,7 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-12">
-        <h1> <small>WELCOME TO</small> QUOTE INITIATOR </h1> 
+        <h1> <small>WELCOME TO</small><hr><br> QUOTE INITIATOR </h1> 
         </div>
     </div>
   </div>
@@ -17,22 +17,23 @@
 
   <!-- first quote -->
 
-  <div>
-    <div *ngFor='let quote of quotes; let i=index' class="each-quote">
-      <h5>QUOTE:</h5>
-      <p id = "{{i}}">"{{quote.quote}}" </p>
-      <p>
-        UPLOAD DATE: {{quote.date|dateSetter}}, {{quote.date|date}}
-      </p>
+    <div class="card" style="width: 18rem;">
+        <div *ngFor='let quote of quotes; let i=index' class="each-quote">
 
-      <app-quote [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote>
 
-      <!-- <app-quote-view [Quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-view> -->
+       <div class="card-body">
+          <i class="fa fa-quote-left"></i><br><hr>
+          <p id = "{{i}}">"{{quote.quote}}" </p><hr>
+          <i class="fa fa-quote-right"></i><br>
+        <h5 class="card-title">
+            <em>{{quote.author}}</em>
+        </h5>
+        <p>{{quote.date|dateSetter}}, {{quote.date|date}}</p><br>
+        
+        <app-quote [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote>
+        
+      </div>
     </div>
-
   </div>
-
-
- 
 </div>
 
